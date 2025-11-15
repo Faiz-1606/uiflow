@@ -7,6 +7,7 @@ import techImg from './assets/tech.jpg';
 import cryptoImg from './assets/crypto.jpg';
 import ytIcon from './assets/youtube.svg';
 import figmaIcon from './assets/figma.svg';
+import bgImage from './assets/bg.jpg';
 import './App.css'
 
 // JSON Data with all metadata
@@ -257,7 +258,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="app" style={{ backgroundImage: `url(${bgImage})` }}>
       {/* Browser Header */}
       <BrowserHeader
         controls={pageData.components.browserControls}
@@ -332,7 +333,7 @@ function App() {
     </text>
 
     <text
-      x="112"
+      x="105"
       y="70"
       fontSize="80"
       fontWeight="700"
@@ -343,7 +344,7 @@ function App() {
     </text>
 
     <text
-      x="168"
+      x="155"
       y="70"
       fontSize="80"
       fontWeight="700"
@@ -354,7 +355,7 @@ function App() {
     </text>
 
     <text
-      x="212"
+      x="205"
       y="70"
       fontSize="80"
       fontWeight="700"
@@ -365,7 +366,7 @@ function App() {
     </text>
 
     <text
-      x="238"
+      x="230"
       y="70"
       fontSize="80"
       fontWeight="700"
