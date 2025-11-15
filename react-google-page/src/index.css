@@ -1,0 +1,85 @@
+/* FULL SCREEN GRADIENT */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* Strong Google-style gradient */
+  background: linear-gradient(
+    135deg,
+    #4285F4 0%,
+    #DB4437 35%,
+    #F4B400 70%,
+    #0F9D58 100%
+  );
+
+  background-attachment: fixed; /* Makes gradient cover full viewport */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Main global styles */
+:root {
+  font-family: 'Google Sans', 'Inter', Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ffffff;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: transparent !important; /* DO NOT override gradient */
+  min-width: 320px;
+  color: #ffffff;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background: rgba(0,0,0,0.35);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: white;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #fff9a8;
+}
+
+/* Light mode override (optional) */
+@media (prefers-color-scheme: light) {
+  html, body, #root {
+    background: linear-gradient(
+      135deg,
+      #4285F4 0%,
+      #DB4437 35%,
+      #F4B400 70%,
+      #0F9D58 100%
+    ) !important;
+  }
+}
