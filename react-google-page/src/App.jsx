@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import news1 from './assets/news1.svg';
 import news2 from './assets/news2.svg';
 import news3 from './assets/news3.svg';
+import isroImg from './assets/isro.jpg';
+import techImg from './assets/tech.jpg';
+import cryptoImg from './assets/crypto.jpg';
+import ytIcon from './assets/youtube.svg';
+import figmaIcon from './assets/figma.svg';
 import './App.css'
 
 // JSON Data with all metadata
@@ -33,10 +38,10 @@ const pageData = {
       "value": "https://www.google.com/"
     },
     "recentTabs": [
-      { "title": "YouTube", "favicon": "yt.png", "url": "https://www.youtube.com" },
-      { "title": "Gmail", "favicon": "gmail.png", "url": "https://mail.google.com" },
-      { "title": "StackOverflow", "favicon": "so-icon.png", "url": "https://stackoverflow.com" },
-      { "title": "Figma – UI Flow", "favicon": "figma.png", "url": "https://www.figma.com" }
+      { "title": "YouTube", "favicon": ytIcon, "url": "https://www.youtube.com" },
+      { "title": "Gmail", "favicon": "https://www.google.com/gmail/about/static/images/logo-gmail.png", "url": "https://mail.google.com" },
+      { "title": "StackOverflow", "favicon": "https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico", "url": "https://stackoverflow.com" },
+      { "title": "Figma – UI Flow", "favicon": figmaIcon, "url": "https://www.figma.com" }
     ],
     "logo": {
       "src": "google-logo.png",
@@ -61,17 +66,17 @@ const pageData = {
       {
         "headline": "India announces new tech innovation grant",
         "src": "Times of India",
-        "thumbnail": news1
+        "thumbnail": techImg
       },
       {
         "headline": "Global markets rally after crypto surge",
         "src": "Economic Times",
-        "thumbnail": news2
+        "thumbnail": cryptoImg
       },
       {
         "headline": "ISRO prepares next mission for 2026",
         "src": "Hindustan Times",
-        "thumbnail": news3
+        "thumbnail": isroImg
       }
     ],
     "topSearches": [
@@ -194,7 +199,7 @@ const BrowserHeader = ({ controls, urlBar, recentTabs, user }) => {
             className="tab"
             title={tab.title}
           >
-            <span className="tab-favicon">📑</span>
+            <img src={tab.favicon} alt="icon" className="tab-icon-img" />
             <span className="tab-title">{tab.title}</span>
             <button className="tab-close" onClick={(e) => e.preventDefault()}>×</button>
           </a>
